@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exploring the Global AI Job Market</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/topojson@3"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Exploring the Global AI Job Market</h1>
+<p>Interactive visualization of AI salaries, experience, geography, and remote work.</p>
+
+<div id="filters">
+  <label>Experience Level:</label>
+  <select id="experienceFilter">
+    <option value="All">All</option>
+    <option value="EN">Entry</option>
+    <option value="MI">Mid</option>
+    <option value="SE">Senior</option>
+    <option value="EX">Executive</option>
+  </select>
+
+  <label>Remote Ratio:</label>
+  <input type="range" id="remoteSlider" min="0" max="100" step="50" value="100">
+  <span id="remoteValue">All</span>
+</div>
+
+<h3>Average AI Salary by Country</h3>
+<svg id="map" width="900" height="450"></svg>
+
+<h3>Average Salary by Industry</h3>
+<svg id="barChart" width="900" height="350"></svg>
+
+<h3>Salary Distribution by Experience Level</h3>
+<svg id="boxPlot" width="900" height="350"></svg>
+
+<div id="tooltip" class="tooltip" style="opacity:0;"></div>
+
+<script src="js/main.js"></script>
+<script src="js/map.js"></script>
+<script src="js/barChart.js"></script>
+<script src="js/boxPlot.js"></script>
+
+</body>
+</html>
