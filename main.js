@@ -3,7 +3,7 @@ let selectedExperience = "All";
 let selectedRemote = 100;
 let selectedCountry = null;
 
-d3.csv("data/ai_jobs.csv", d3.autoType).then(data => {
+d3.csv("data/ai_job_dataset.csv", d3.autoType).then(data => {
   globalData = data;
   drawMap(globalData);
   updateBarChart(globalData);
